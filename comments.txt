@@ -1,0 +1,21 @@
+backend
+
+npm i tslint-D 
+Allows better practices in ts
+
+./node_modules/.bin/tslint --init
+Open tslint.json and then type
+
+ "rules": {
+        "no-console": false
+    }
+Allows use console nad don't show errors
+
+npm i typescript
+may be the other programmer don't use or don't have install TS
+
+npm i mysql2 
+Is better than npm i mysql 
+#################################################################################3
+
+frontend
