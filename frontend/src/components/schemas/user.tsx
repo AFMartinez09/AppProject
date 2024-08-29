@@ -92,4 +92,4 @@ export const userSchema = z
     }
   );
 
-type DataUserForm = z.infer<typeof userSchema>;
+export type DataUserForm = z.infer<typeof userSchema>;
