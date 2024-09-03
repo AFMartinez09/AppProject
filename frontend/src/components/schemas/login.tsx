@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const userSchema = z.object({
+export const loginSchema = z.object({
   email: z
   .string()
   .min(1, { message: "Este campo es requerido" })
@@ -18,4 +18,6 @@ export const userSchema = z.object({
     /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
     { message: "La contraseña debe de  contener al menos 8 caracteres, 1 letra minúscula, 1 letra mayúscula, un número y puede contener caracteres especiales." }
   )
-})
+});
+
+export type DataLoginForm = z.infer<typeof loginSchema>;
