@@ -104,3 +104,5 @@ const TemplateUser = ({ children, handleSubmit, childrenBtn }: Props) => {
     </div>
   );
 };
+
+export default TemplateUser;
