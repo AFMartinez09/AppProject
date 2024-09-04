@@ -42,14 +42,14 @@ export const userSchema = z
       .max(20, { message: "Debe contener máximo 20 caracteres." }),
     lastname: z
       .string()
-      .regex(/^\d+$/, { message: "Solo puede contener números" })
       .min(1, { message: "Este campo es requerido." })
-      .min(7, { message: "Debe de contener mínimo 7 dígitos." })
+      .min(3, { message: "Debe de contener mínimo 3 dígitos." })
       .max(10, { message: "Debe contener máximo 10 dígitos." }),
-    type: z.enum(documentType),
-    identification: z.string(),
-    phone: z
+      type: z.enum(documentType),
+      identification: z.string(),
+      phone: z
       .string()
+      .regex(/^\d+$/, { message: "Solo puede contener números" })
       .min(1, { message: "Este campo es requerido." })
       .min(7, { message: "Debe de contener al menos 7 digitos." })
       .max(10, { message: "Máximo puede contener 10 dígitos." }),
@@ -67,7 +67,7 @@ export const userSchema = z
       .max(50, { message: "Debe contener máximo 50 caracteres." })
       .regex(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/, {
         message:
-          "La contraseña debe de  contener al menos 8 caracteres, 1 letra minúscula, 1 letra mayúscula, un número y puede contener caracteres especiales.",
+          "No contiene al menos 8 caracteres, minúsculas (1),mayúsculas (1) y un número.",
       }),
     address: z.string().optional(),
     city: z.string().optional(),
@@ -75,7 +75,6 @@ export const userSchema = z
     otherPhone: z
      .string()
      .regex(/^\d+$/, { message: "Solamente puede contener números" })
-     .optional(),
   })
   .refine(
     (id) => {
