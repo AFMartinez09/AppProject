@@ -7,7 +7,8 @@ type BtnClassName =
   "warning" | 
   "cancel" | 
   "adding" | 
-  "delete";
+  "delete" |
+  "limpiar";
 
 type BtnType = "submit" | "button";
 
@@ -21,7 +22,7 @@ type Props = {
   to?: string;
 }
 
-const Button = ({ children, className = "primary", type = "button", onClick, to = "/" }: Props) => {
+const Button = ({ children, className = "primary", type, onClick, to }: Props) => {
   if(to){
     return (
       <NavLink to={to} className={className}>
