@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(196, 195, 195);
+  width: 900px;
+  margin-top: 40px;
+  border-radius: 30px;
+}
+
+.title{
+  display: grid;
+  justify-content: center;
+  margin: 10px 0px 10px 0px;
+  font-size: var(--title-font-size);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.formUser{
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  gap: 20px;
+}
