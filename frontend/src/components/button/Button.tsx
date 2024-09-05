@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import { NavLink } from 'react-router-dom';
+import Style from '../../styles/Button.module.css';
 
 type BtnClassName = 
   "primary" | 
@@ -8,11 +9,9 @@ type BtnClassName =
   "cancel" | 
   "adding" | 
   "delete" |
-  "limpiar";
+  "clean";
 
 type BtnType = "submit" | "button";
-
-// type LinksType = "/" | "/home"
 
 type Props = {
   children: ReactNode;
@@ -25,7 +24,7 @@ type Props = {
 const Button = ({ children, className = "primary", type, onClick, to }: Props) => {
   if(to){
     return (
-      <NavLink to={to} className={className}>
+      <NavLink to={to} className={Style[className]}>
         { children }
       </NavLink>
     
@@ -33,7 +32,7 @@ const Button = ({ children, className = "primary", type, onClick, to }: Props) =
   }
     return (
         <button
-          className={className}
+          className={Style[className]}
           type={type}
           onClick={onClick}
         >
@@ -43,4 +42,4 @@ const Button = ({ children, className = "primary", type, onClick, to }: Props) =
 )
 }
 
-export default Button
+export default Button;
