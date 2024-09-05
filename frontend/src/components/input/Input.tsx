@@ -19,25 +19,27 @@ const Input = ({ children, type, name }: Props) => {
   const handleBlur = () => setFocus(false);
 
   return (
-    <div className={Style.form_div}>
-      <input
-        {...register(name)}
-        name={name}
-        type={type}
-        placeholder=" "
-        className={`${Style.form_input} ${focus ? Style.form_input_focus : ""}`}
-        id={name}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-      />
-      <label
-        htmlFor={name}
-        className={`${Style.form_label} ${focus ? Style.form_label_focus : ""}`}
-      >
-        {children}
-      </label>
-      {error?.message && <div className={Style.mistake}>{error?.message}</div>}
-    </div>
+    <>
+      <div className={Style.form_div}>
+        <input
+          {...register(name)}
+          name={name}
+          type={type}
+          placeholder=" "
+          className={`${Style.form_input} ${focus ? Style.form_input_focus : ""}`}
+          id={name}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          />
+        <label
+          htmlFor={name}
+          className={`${Style.form_label} ${focus ? Style.form_label_focus : ""}`}
+          >
+          {children}
+        </label>
+      {error?.message && <span className={Style.mistake}>{error?.message}</span>}
+      </div>
+    </>
   );
 };
 

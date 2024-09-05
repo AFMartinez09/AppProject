@@ -7,7 +7,8 @@ type BtnClassName =
   "warning" | 
   "cancel" | 
   "adding" | 
-  "delete";
+  "delete" |
+  "limpiar";
 
 type BtnType = "submit" | "button";
 

@@ -1,4 +1,8 @@
 /*===== FORM =====*/
+.form_div{
+  position: relative;
+  margin-bottom: 1.5rem;
+}
 .l_form {
   display: flex;
   justify-content: center;
@@ -26,7 +30,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   font-size: var(--normal-font-size);
   border: 2px solid var(--input-border-color);
   border-radius: 0.5rem;
@@ -40,7 +43,7 @@
   left: 1rem;
   top: 1rem;
   padding: 0 0.25rem;
-  background-color: #fff;
+  background-color: transparent;
   color: var(--input-color);
   font-size: var(--normal-font-size);
   transition: 0.3s;
@@ -66,7 +69,7 @@
 
 /*Input focus move up label*/
 .form_input:focus + .form_label {
-  top: -0.5rem;
+  top: -1rem;
   left: 0.8rem;
   color: var(--input-hoover);
   font-size: var(--small-font-size);
@@ -75,8 +78,8 @@
 }
 
 .form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label {
-  top: -0.5rem;
-  left: 0.8rem;
+  top: -1rem;
+  left: 0.2rem;
   z-index: 2;
   font-size: var(--small-font-size);
   font-weight: 500;
@@ -87,12 +90,10 @@
   border: 2px solid var(--input-hoover);
 }
 
-.pelo{
-  width: 400px;
-  height: 30px;
-}
-
-.pelo_form{
-width: 100%;
-height: 100%;
+.mistake {
+  display: inline;
+  font-size: var(--small-font-size);
+  line-height: 0.75rem;
+  color: var(--text-error);
+  margin-top: 200.5rem;
 }
