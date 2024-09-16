@@ -71,7 +71,7 @@
 .form_input:focus + .form_label {
   top: -1rem;
   left: 0.8rem;
-  color: var(--input-hoover);
+  color: var(--input-hover);
   font-size: var(--small-font-size);
   font-weight: 500;
   z-index: 2;
@@ -87,7 +87,7 @@
 
 /*Input focus*/
 .form_input:focus {
-  border: 2px solid var(--input-hoover);
+  border: 2px solid var(--input-hover);
 }
 
 .mistake {
