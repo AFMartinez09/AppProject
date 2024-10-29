@@ -17,16 +17,18 @@
   box-shadow: 0 0.625rem 1.56rem rgba(92, 99, 105, 0.2);
 }
 .form_title {
+  display: flex;
   font-weight: bold;
   margin-bottom: 2.5rem;
+  justify-content: center;
+  font-size: 2em;
 }
 .form_div {
   position: relative;
-  height: 3.25rem;
+  height: 4rem;
   margin-bottom: 1.5rem;
 }
 .form_input {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -91,9 +93,9 @@
 }
 
 .mistake {
-  display: inline;
   font-size: var(--small-font-size);
-  line-height: 0.75rem;
   color: var(--text-error);
-  margin-top: 200.5rem;
+  display: block;
+  margin-top: 0.5rem;
+  line-height: 1rem;
 }
